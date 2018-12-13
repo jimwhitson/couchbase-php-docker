@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+    php:
+        build: ./php
+        ports:
+            - 8080:9000
+        environment:
+            - COUCHBASE_HOST=couchbase
+            - COUCHBASE_BUCKET_NAME=default
+            - COUCHBASE_BUCKET_PASSWORD=
+        restart: always
